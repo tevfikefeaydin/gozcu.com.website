@@ -1,0 +1,453 @@
+/* ═══════════════════════════════════════════════════════════
+   Gözcü — gozcu.com
+   Erişilebilirlik-önce tasarım: yüksek kontrast, büyük hedefler,
+   hareket-azaltmaya saygı, renk asla tek başına bilgi taşımaz.
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  --bg: #0b1120;
+  --surface: #141d33;
+  --surface-2: #1b2745;
+  --line: #2c3a5e;
+  --text: #f3f6fc;
+  --muted: #b9c4d8;
+  --accent: #ffc94d;        /* fener amberi */
+  --accent-ink: #221600;
+  --listening: #7dd3fc;
+  --looking: #ffc94d;
+  --success: #4ade80;
+  --error: #fb8a8a;
+  --safety: #ff6b6b;
+  --radius: 18px;
+  --maxw: 68rem;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+/* ── Atla bağlantısı ─────────────────────────────── */
+.skip-link {
+  position: absolute;
+  left: 1rem; top: -4rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0.9rem 1.4rem;
+  border-radius: 0 0 12px 12px;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 100;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 0; }
+
+/* ── Odak görünürlüğü (klavye) ───────────────────── */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ── Üst çubuk ───────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.site-header nav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0.7rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--accent);
+  font-size: 1.45rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  display: inline-block;
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.6rem 0.85rem;
+  border-radius: 10px;
+}
+.nav-links a:hover { background: var(--surface-2); text-decoration: underline; }
+
+/* ── Butonlar (≥44px hedef) ──────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3.25rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { background: var(--surface-2); }
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-primary:hover { background: #ffd97a; }
+.btn-ghost { border-color: var(--line); color: var(--text); }
+.btn-small { min-height: 2.75rem; padding: 0.4rem 1.1rem; }
+.btn-tiny { min-height: 2.75rem; padding: 0.35rem 1.1rem; font-size: 1rem; white-space: nowrap; }
+
+/* ── Hero ────────────────────────────────────────── */
+.hero {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 5rem 1.25rem 4rem;
+  text-align: center;
+  position: relative;
+}
+.hero h1 {
+  font-size: clamp(2.8rem, 8vw, 5.2rem);
+  line-height: 1.08;
+  margin: 1.5rem 0 1rem;
+  letter-spacing: -0.01em;
+}
+.hero h1 .word { display: inline-block; }
+.hero h1 .accent { color: var(--accent); }
+.lede {
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+  font-size: 1.3rem;
+  color: var(--muted);
+}
+.lede strong { color: var(--text); }
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+/* sonar nabzı */
+.hero-pulse {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+.hero-pulse .core {
+  position: absolute;
+  inset: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 30px 4px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+.hero-pulse .ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  opacity: 0;
+  animation: sonar 3.2s ease-out infinite;
+}
+.hero-pulse .r2 { animation-delay: 1.05s; }
+.hero-pulse .r3 { animation-delay: 2.1s; }
+@keyframes sonar {
+  0%   { transform: scale(0.35); opacity: 0.85; }
+  100% { transform: scale(1.6);  opacity: 0; }
+}
+
+/* dürüstlük şeridi */
+.honesty {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 44rem;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  color: var(--muted);
+}
+.honesty svg { flex-shrink: 0; color: var(--accent); margin-top: 0.2rem; }
+.honesty strong { color: var(--text); }
+
+/* ── Bölümler ────────────────────────────────────── */
+.section {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 4.5rem 1.25rem;
+  border-top: 1px solid var(--line);
+}
+.section h2 {
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+.section-lede {
+  max-width: 46rem;
+  color: var(--muted);
+  margin: 0 0 2.5rem;
+  font-size: 1.2rem;
+}
+.section-lede strong, .section-lede em { color: var(--text); }
+
+/* ── Kart ızgaraları ─────────────────────────────── */
+.cards {
+  display: grid;
+  gap: 1.25rem;
+}
+.cards.three { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+.card h3 { margin: 0 0 0.5rem; font-size: 1.3rem; }
+.card p { margin: 0; color: var(--muted); }
+.card p strong, .card p em { color: var(--text); }
+.card-gesture {
+  font-size: 2rem;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.35em;
+}
+
+/* akış şeridi */
+.flow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2.5rem 0 1rem;
+}
+.flow-step {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.7rem 1.5rem;
+  font-weight: 700;
+}
+.flow-step.accent { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.flow-arrow { color: var(--muted); font-size: 1.4rem; }
+
+.fineprint { color: var(--muted); font-size: 1rem; }
+.fineprint em { color: var(--text); }
+
+/* ── Sesli demo ──────────────────────────────────── */
+.demo-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: start;
+}
+@media (max-width: 46rem) { .demo-grid { grid-template-columns: 1fr; } }
+.demo-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.demo-q {
+  min-height: 3.5rem;
+  padding: 0.9rem 1.4rem;
+  text-align: left;
+  font: inherit;
+  font-weight: 700;
+  color: var(--text);
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  cursor: pointer;
+}
+.demo-q:hover { border-color: var(--accent); }
+.demo-q[aria-pressed="true"] { border-color: var(--accent); background: var(--surface-2); }
+.demo-screen {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  min-height: 11rem;
+  padding: 1.75rem;
+  display: flex;
+  align-items: center;
+}
+.demo-screen p {
+  margin: 0;
+  font-size: 1.45rem;
+  line-height: 1.5;
+}
+.demo-screen p.speaking { color: var(--accent); }
+.sim-badge {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+}
+.sim-badge strong { color: var(--text); }
+
+/* ── Haptik dili ─────────────────────────────────── */
+.haptic-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.haptic {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.5rem;
+}
+.haptic-info { flex: 1; }
+.haptic-info h3 { margin: 0 0 0.15rem; font-size: 1.15rem; }
+.haptic-info p { margin: 0; color: var(--muted); font-size: 1.05rem; }
+.haptic-info p strong { color: var(--text); }
+.safety-row { border-left: 5px solid var(--safety); }
+
+/* titreşim desenleri: renk + çubuk sayısı + boy birlikte anlam taşır */
+.swatch {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 5px;
+  width: 3.4rem;
+  height: 2.6rem;
+  flex-shrink: 0;
+  justify-content: center;
+}
+.swatch i {
+  display: block;
+  width: 9px;
+  border-radius: 4px;
+  background: currentColor;
+}
+.swatch.listening { color: var(--listening); } .swatch.listening i { height: 32%; }
+.swatch.looking   { color: var(--looking); }   .swatch.looking i { height: 60%; }
+.swatch.success   { color: var(--success); }   .swatch.success i { height: 45%; }
+.swatch.success i:nth-child(2) { height: 75%; }
+.swatch.error     { color: var(--error); }     .swatch.error i { height: 55%; }
+.swatch.safety    { color: var(--safety); }    .swatch.safety i { height: 100%; width: 12px; }
+
+/* ── Paketler ────────────────────────────────────── */
+.price-card { text-align: center; }
+.price { margin: 0.5rem 0 0.25rem; }
+.price .amount { font-size: 2.6rem; font-weight: 700; }
+.price .per { color: var(--muted); font-size: 1.1rem; }
+.quota {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  font-weight: 700;
+}
+.pricing-notes {
+  margin-top: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  color: var(--muted);
+}
+.pricing-notes p { margin-top: 0; }
+.pricing-notes strong, .pricing-notes em { color: var(--text); }
+.pricing-notes ul { margin: 0; padding-left: 1.3rem; }
+.pricing-notes li { margin-bottom: 0.5rem; }
+
+/* ── Erişilebilirlik listesi ─────────────────────── */
+.a11y-list {
+  margin: 0;
+  padding-left: 1.3rem;
+  color: var(--muted);
+  max-width: 46rem;
+}
+.a11y-list li { margin-bottom: 0.75rem; }
+.a11y-list strong { color: var(--text); }
+
+/* ── SSS ─────────────────────────────────────────── */
+.faq { display: grid; gap: 0.9rem; max-width: 50rem; }
+.faq details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0;
+  overflow: hidden;
+}
+.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 1.2rem 1.5rem;
+  list-style-position: inside;
+}
+.faq summary:hover { background: var(--surface-2); }
+.faq details[open] summary { border-bottom: 1px solid var(--line); }
+.faq details p { margin: 0; padding: 1.1rem 1.5rem 1.3rem; color: var(--muted); }
+
+/* ── CTA + footer ────────────────────────────────── */
+.cta { text-align: center; }
+.store-btn .soon {
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: var(--accent-ink);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+}
+.store-btn[aria-disabled="true"] { opacity: 0.75; cursor: not-allowed; }
+.site-footer {
+  border-top: 1px solid var(--line);
+  text-align: center;
+  padding: 3rem 1.25rem;
+  color: var(--muted);
+}
+.site-footer p { margin: 0.35rem 0; }
+.site-footer strong { color: var(--accent); }
+.honesty-mini { font-size: 1rem; }
+
+/* ── Hareket azaltma: animasyon yok, bilgi kaybı yok ── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-pulse .ring { animation: none; opacity: 0.4; transform: scale(1); }
+  .hero-pulse .r2 { transform: scale(0.72); }
+  .hero-pulse .r3 { transform: scale(0.45); }
+  * { transition: none !important; }
+}
