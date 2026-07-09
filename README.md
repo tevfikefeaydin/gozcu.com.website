@@ -1,28 +1,8 @@
 # gozcu.com — Gözcü tanıtım sitesi
 
-**Gözcü**, görme engelli kullanıcılar için canlı görüyü kısa Türkçe sesli yanıta çeviren
-iOS + Android asistanının tanıtım sitesi.
-
-## Tasarım ilkesi
-
-Uygulama erişilebilirlik-önce; sitesi de öyle. Bu sayfa "duyulabilen bir web sitesi"
-olarak tasarlandı:
-
-- **Sesli demo:** Örnek sorular, tarayıcının Türkçe konuşma sentezi (`speechSynthesis`,
-  `tr-TR`) ile seslendirilir — ve uygulamadaki deneme modu gibi kendini dürüstçe
-  "simülasyon" diye tanıtır.
-- **Haptik dili:** Uygulamanın titreşim imza seti (dinliyor / bakıyor / yanıt / hata /
-  GÜVENLİK) telefonda `navigator.vibrate` ile gerçekten hissedilir; titreşim motoru
-  olmayan cihazlarda desen sesle tarif edilir.
-- **Atkinson Hyperlegible** yazı tipi, koyu zemin üzerinde yüksek kontrast, ≥44px
-  dokunma hedefleri, "içeriğe atla" bağlantısı, tam klavye gezinmesi.
-- **`prefers-reduced-motion`** tercihinde tüm animasyonlar kapanır; hiçbir bilgi kaybolmaz.
-- Renk hiçbir yerde tek başına bilgi taşımaz (renk + desen + metin + ses birlikte).
-- JS kapalıyken sayfa eksiksiz okunur (ilerlemeli iyileştirme).
+**Gözcü** mobil asistanının tanıtım sayfası. Tamamen statik; derleme adımı yok.
 
 ## Çalıştırma
-
-Tamamen statik — derleme adımı yok:
 
 ```bash
 python3 -m http.server 8000
@@ -35,14 +15,8 @@ olduğu gibi yüklenebilir.
 ## Yapı
 
 ```
-index.html          tek sayfa: hero · sesli demo · nasıl çalışır · haptik dili ·
-                    ilkeler · bakış paketleri · erişilebilirlik · SSS · indir
-assets/style.css    tema (fener amberi + gece lacivert) ve erişilebilirlik kuralları
+index.html          tek sayfa
+assets/style.css    tema ve erişilebilirlik kuralları
 assets/script.js    sesli demo + titreşim denemeleri (ilerlemeli iyileştirme)
-assets/favicon.svg  sonar/fener logosu
+assets/favicon.svg  logo
 ```
-
-> Not: Mağaza bağlantıları uygulama yayınlandığında eklenecek; "yakında" rozetiyle
-> yer tutuyorlar. Paket fiyatları uygulamadaki tek-kaynak tanımlarla
-> (Başlangıç 1.000/$5.99 · Standart 2.000/$11.99 · Pro 4.000/$29.99 · 30 ücretsiz
-> deneme bakışı) birebir aynıdır ve hiçbir paket "en avantajlı" diye işaretlenmez.
