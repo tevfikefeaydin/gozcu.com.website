@@ -44,5 +44,6 @@ assets/favicon.svg  sonar/fener logosu
 
 > Not: Mağaza bağlantıları uygulama yayınlandığında eklenecek; "yakında" rozetiyle
 > yer tutuyorlar. Paket fiyatları uygulamadaki tek-kaynak tanımlarla
-> (Başlangıç 1.000/$5.99 · Standart 2.000/$11.99 · Pro 4.000/$29.99 · 30 ücretsiz
-> deneme bakışı) birebir aynıdır ve hiçbir paket "en avantajlı" diye işaretlenmez.
+> (Basic 1.000 bakış — ₺280/ay, diğer ülkelerde $5.99 · Pro 4.000 bakış — ₺1.400/ay,
+> diğer ülkelerde $29.99 · 30 ücretsiz deneme bakışı) birebir aynıdır ve hiçbir
+> paket "en avantajlı" diye işaretlenmez.
