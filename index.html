@@ -8,7 +8,7 @@
   <meta property="og:title" content="Gözcü — Dokun. Bak. Duy." />
   <meta property="og:description" content="Telefonunu kaldır, ekrana dokun: Gözcü çevreni görür ve kısa Türkçe sesle anlatır." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0B1120" />
+  <meta name="theme-color" content="#070d1d" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +18,7 @@
 <body>
   <a class="skip-link" href="#icerik">İçeriğe atla</a>
 
-  <header class="site-header">
+  <header class="site-header" id="ust">
     <nav aria-label="Ana gezinme">
       <a class="brand" href="#" aria-label="Gözcü, ana sayfa">
         <svg class="brand-mark" viewBox="0 0 48 48" width="36" height="36" aria-hidden="true" focusable="false">
@@ -35,7 +35,7 @@
         <li><a href="#paketler">Paketler</a></li>
         <li><a href="#sss">SSS</a></li>
       </ul>
-      <a class="btn btn-small" href="#indir">Uygulamayı al</a>
+      <a class="btn btn-primary btn-small" href="#indir">Uygulamayı al</a>
     </nav>
   </header>
 
@@ -43,28 +43,65 @@
 
     <!-- ═══════════ HERO ═══════════ -->
     <section class="hero" aria-labelledby="hero-baslik">
-      <div class="hero-pulse" aria-hidden="true">
-        <span class="ring r1"></span>
-        <span class="ring r2"></span>
-        <span class="ring r3"></span>
-        <span class="core"></span>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">Görme engelliler için sesli görü asistanı</p>
+          <h1 id="hero-baslik">
+            <span class="word">Dokun.</span>
+            <span class="word">Bak.</span>
+            <span class="word accent">Duy.</span>
+          </h1>
+          <p class="lede">
+            Gözcü, telefonunun arka kamerasıyla çevreni görür ve sorularını
+            <strong>kısa, net Türkçe sesle</strong> yanıtlar.
+            Önünde ne var, menüde ne yazıyor, hangi renk, kaç para —
+            ekrana bir dokunuş kadar yakın.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#indir">iOS &amp; Android için Gözcü</a>
+            <a class="btn btn-ghost" href="#demo">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 5.5v13l11-6.5L8 5.5z"/></svg>
+              Sesli demoyu dene
+            </a>
+          </div>
+          <ul class="trust-row" aria-label="Öne çıkanlar">
+            <li>iOS &amp; Android</li>
+            <li>Türkçe sesli yanıt</li>
+            <li>30 ücretsiz bakış</li>
+            <li>Ekran okuyucu dostu</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="phone">
+            <span class="phone-notch"></span>
+            <div class="phone-screen">
+              <p class="phone-status"><span class="dot"></span> Gözcü hazır</p>
+              <div class="tap-point">
+                <span class="ring r1"></span>
+                <span class="ring r2"></span>
+                <span class="ring r3"></span>
+                <span class="core"></span>
+              </div>
+              <p class="phone-hint">Dokun = Bak</p>
+              <div class="phone-bubble">
+                <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+                <p>"Önünüzde üç adım ileride alçak bir sehpa var. Sağınızdan geçebilirsiniz."</p>
+              </div>
+            </div>
+          </div>
+          <p class="float-chip chip-1">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>
+            Kısa Türkçe sesli yanıt
+          </p>
+          <p class="float-chip chip-2">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 4 5v6c0 5.25 3.4 10.2 8 11 4.6-.8 8-5.75 8-11V5l-8-3zm-1.2 13.6-3-3 1.4-1.4 1.6 1.6 4-4 1.4 1.4-5.4 5.4z"/></svg>
+            Güvenlik her zaman önce
+          </p>
+        </div>
       </div>
-      <h1 id="hero-baslik">
-        <span class="word">Dokun.</span>
-        <span class="word">Bak.</span>
-        <span class="word accent">Duy.</span>
-      </h1>
-      <p class="lede">
-        Gözcü, telefonunun arka kamerasıyla çevreni görür ve sorularını
-        <strong>kısa, net Türkçe sesle</strong> yanıtlar.
-        Önünde ne var, menüde ne yazıyor, hangi renk, kaç para —
-        ekrana bir dokunuş kadar yakın.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#indir">iOS &amp; Android için Gözcü</a>
-        <a class="btn btn-ghost" href="#demo">Sesli demoyu dene</a>
-      </div>
-      <p class="honesty" role="note">
+
+      <p class="honesty reveal" role="note">
         <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 1 21h22L12 2zm0 6.5 6.7 11H5.3L12 8.5zM11 12v3h2v-3h-2zm0 4.5v2h2v-2h-2z"/></svg>
         <span>Gözcü bir <strong>yardımcı araçtır</strong>; bastonun ya da rehber köpeğin yerini almaz.
         Bunu ilk açılışta sesli olarak da söyleriz — çünkü dürüstlük, tasarımımızın parçasıdır.</span>
@@ -73,21 +110,26 @@
 
     <!-- ═══════════ SESLİ DEMO ═══════════ -->
     <section id="demo" class="section demo" aria-labelledby="demo-baslik">
-      <h2 id="demo-baslik">Bu site konuşur — tıpkı Gözcü gibi</h2>
-      <p class="section-lede">
+      <p class="kicker reveal">Sesli demo</p>
+      <h2 id="demo-baslik" class="reveal">Bu site konuşur — tıpkı Gözcü gibi</h2>
+      <p class="section-lede reveal">
         Aşağıdaki sorulardan birini seç; tarayıcın, Gözcü'nün vereceği türden bir örnek yanıtı
         <strong>Türkçe seslendirsin</strong>. Yanıtlar kısa tutulur, güvenlik her zaman önce gelir.
       </p>
       <div class="demo-grid">
-        <div class="demo-buttons" role="group" aria-label="Örnek sorular">
+        <div class="demo-buttons reveal" role="group" aria-label="Örnek sorular">
           <button class="demo-q" type="button" data-cevap="Önünüzde üç adım ileride alçak bir sehpa var. Sağınızdan geçebilirsiniz.">"Önümde ne var?"</button>
           <button class="demo-q" type="button" data-cevap="Menüde bugünün çorbası mercimek, 85 lira yazıyor. Ana yemekler bir alt bölümde.">"Menüde ne yazıyor?"</button>
           <button class="demo-q" type="button" data-cevap="Kazak koyu lacivert. Yanındaki açık gri olan da güzel duruyor.">"Bu ne renk?"</button>
           <button class="demo-q" type="button" data-cevap="Etikette 249 lira 90 kuruş yazıyor.">"Kaç para?"</button>
           <button class="demo-q" type="button" data-cevap="Dikkat: hemen önünüzde aşağı inen iki basamak var. Durun ve bastonunuzla kontrol edin.">"Yol güvenli mi?"</button>
         </div>
-        <div class="demo-out">
-          <div class="demo-screen" aria-hidden="false">
+        <div class="demo-out reveal">
+          <div class="demo-screen" id="demo-ekran" aria-hidden="false">
+            <div class="demo-screen-top">
+              <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+              <span class="demo-screen-label">Gözcü yanıtlıyor</span>
+            </div>
             <p id="demo-metin" aria-live="polite">Bir soruya dokun; örnek yanıt burada yazar ve sesli okunur.</p>
           </div>
           <p class="sim-badge" id="demo-rozet">
@@ -100,36 +142,55 @@
 
     <!-- ═══════════ NASIL ÇALIŞIR ═══════════ -->
     <section id="nasil" class="section" aria-labelledby="nasil-baslik">
-      <h2 id="nasil-baslik">Ekranı görmene gerek yok. Ezberlemene de.</h2>
-      <p class="section-lede">
+      <p class="kicker reveal">Nasıl çalışır</p>
+      <h2 id="nasil-baslik" class="reveal">Ekranı görmene gerek yok. Ezberlemene de.</h2>
+      <p class="section-lede reveal">
         Tüm ekran <strong>tek bir hedeftir</strong>. Menü yok, küçük buton yok, kaybolacağın akış yok.
         Üç hareket, hepsi bu:
       </p>
-      <div class="cards three">
-        <article class="card">
-          <p class="card-gesture" aria-hidden="true">●</p>
+      <div class="cards three steps">
+        <article class="card reveal">
+          <span class="step-no" aria-hidden="true">1</span>
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="30" height="30" focusable="false">
+              <circle cx="24" cy="24" r="6" fill="currentColor"/>
+              <circle cx="24" cy="24" r="14" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.5"/>
+            </svg>
+          </span>
           <h3>Dokun = Bak</h3>
           <p>Ekranın herhangi bir yerine bir kez dokun. Gözcü kameradan bakar ve gördüğünü kısa bir cümleyle söyler.</p>
         </article>
-        <article class="card">
-          <p class="card-gesture" aria-hidden="true">● ●</p>
+        <article class="card reveal">
+          <span class="step-no" aria-hidden="true">2</span>
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="30" height="30" focusable="false">
+              <circle cx="16" cy="24" r="6" fill="currentColor"/>
+              <circle cx="33" cy="24" r="6" fill="currentColor" opacity="0.55"/>
+            </svg>
+          </span>
           <h3>Çift dokun = Konuş</h3>
           <p>Bas-konuş gibi: çift dokun, sorunu sor. Gözcü yalnızca sen istediğinde dinler — <strong>sürekli dinleme yoktur</strong>.</p>
         </article>
-        <article class="card">
-          <p class="card-gesture" aria-hidden="true">◉</p>
+        <article class="card reveal">
+          <span class="step-no" aria-hidden="true">3</span>
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="30" height="30" focusable="false">
+              <circle cx="24" cy="24" r="7" fill="currentColor"/>
+              <circle cx="24" cy="24" r="13" fill="none" stroke="currentColor" stroke-width="3"/>
+            </svg>
+          </span>
           <h3>Uzun bas = Ayarlar</h3>
           <p>Ses hızı, ekran okuyucu tercihi, paket durumu. Hepsi sesli geri bildirimle, hepsi tek elle.</p>
         </article>
       </div>
-      <div class="flow" role="img" aria-label="Akış: telefon kameradan kareyi alır, Gözcü sahneyi analiz eder, kısa Türkçe sesli yanıt ve duruma özel titreşim döner.">
+      <div class="flow reveal" role="img" aria-label="Akış: telefon kameradan kareyi alır, Gözcü sahneyi analiz eder, kısa Türkçe sesli yanıt ve duruma özel titreşim döner.">
         <span class="flow-step">Kamera görür</span>
         <span class="flow-arrow" aria-hidden="true">→</span>
         <span class="flow-step">Gözcü anlar</span>
         <span class="flow-arrow" aria-hidden="true">→</span>
         <span class="flow-step accent">Sen duyarsın</span>
       </div>
-      <p class="fineprint">
+      <p class="fineprint reveal">
         Canlı bağlantı zayıfladığında Gözcü sessizce çökmez: otomatik olarak tek-kare moduna geçer ve
         <em>bunu sana sesli bildirir</em>. Sürpriz yok.
       </p>
@@ -137,14 +198,15 @@
 
     <!-- ═══════════ HAPTİK DİLİ ═══════════ -->
     <section id="haptik" class="section" aria-labelledby="haptik-baslik">
-      <h2 id="haptik-baslik">Titreşim, Gözcü'nün ikinci dilidir</h2>
-      <p class="section-lede">
+      <p class="kicker reveal">Haptik dili</p>
+      <h2 id="haptik-baslik" class="reveal">Titreşim, Gözcü'nün ikinci dilidir</h2>
+      <p class="section-lede reveal">
         Her durumun kendi dokunuşu var; sesin ulaşamadığı gürültülü sokakta bile ne olduğunu bilirsin.
         Renk hiçbir zaman tek başına bilgi taşımaz: her durum <strong>renk + desen + metin + ses + titreşimdir</strong>.
         Telefonda açtıysan "Hisset" ile gerçekten deneyebilirsin.
       </p>
       <ul class="haptic-list">
-        <li class="haptic">
+        <li class="haptic reveal">
           <span class="swatch listening" aria-hidden="true"><i></i></span>
           <div class="haptic-info">
             <h3>Dinliyor</h3>
@@ -152,7 +214,7 @@
           </div>
           <button class="btn btn-tiny" type="button" data-vib="35" data-say="Hafif tek titreşim: dinliyor.">Hisset</button>
         </li>
-        <li class="haptic">
+        <li class="haptic reveal">
           <span class="swatch looking" aria-hidden="true"><i></i><i></i></span>
           <div class="haptic-info">
             <h3>Bakıyor</h3>
@@ -160,7 +222,7 @@
           </div>
           <button class="btn btn-tiny" type="button" data-vib="80" data-say="Orta şiddette tek titreşim: bakıyor.">Hisset</button>
         </li>
-        <li class="haptic">
+        <li class="haptic reveal">
           <span class="swatch success" aria-hidden="true"><i></i><i></i><i></i></span>
           <div class="haptic-info">
             <h3>Yanıt hazır</h3>
@@ -168,7 +230,7 @@
           </div>
           <button class="btn btn-tiny" type="button" data-vib="30,60,30" data-say="Yumuşak başarı deseni: yanıt hazır.">Hisset</button>
         </li>
-        <li class="haptic">
+        <li class="haptic reveal">
           <span class="swatch error" aria-hidden="true"><i></i><i></i></span>
           <div class="haptic-info">
             <h3>Hata</h3>
@@ -176,7 +238,7 @@
           </div>
           <button class="btn btn-tiny" type="button" data-vib="60,80,60" data-say="Kısa çift uyarı: hata.">Hisset</button>
         </li>
-        <li class="haptic safety-row">
+        <li class="haptic safety-row reveal">
           <span class="swatch safety" aria-hidden="true"><i></i><i></i></span>
           <div class="haptic-info">
             <h3>GÜVENLİK</h3>
@@ -189,30 +251,49 @@
 
     <!-- ═══════════ İLKELER ═══════════ -->
     <section id="ilkeler" class="section" aria-labelledby="ilkeler-baslik">
-      <h2 id="ilkeler-baslik">Sözünü tutan bir asistan</h2>
-      <p class="section-lede">Bu kurallar pazarlama metni değil; Gözcü'nün çekirdeğine yazılmış, testle korunan sözleşmelerdir.</p>
+      <p class="kicker reveal">İlkelerimiz</p>
+      <h2 id="ilkeler-baslik" class="reveal">Sözünü tutan bir asistan</h2>
+      <p class="section-lede reveal">Bu kurallar pazarlama metni değil; Gözcü'nün çekirdeğine yazılmış, testle korunan sözleşmelerdir.</p>
       <div class="cards three principles">
-        <article class="card">
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" focusable="false"><path fill="currentColor" d="M12 2 4 5v6c0 5.25 3.4 10.2 8 11 4.6-.8 8-5.75 8-11V5l-8-3zm-1.2 13.6-3-3 1.4-1.4 1.6 1.6 4-4 1.4 1.4-5.4 5.4z"/></svg>
+          </span>
           <h3>Güvenlik her zaman önce</h3>
           <p>Sahnede tehlike varsa Gözcü önce onu söyler; mesafeyi metre değil <strong>"kaç adım"</strong> olarak verir.</p>
         </article>
-        <article class="card">
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15h-2v-2h2v2zm1.07-5.25-.9.92c-.5.51-.17 1.33-.17 1.33h-2s-.33-1.54.83-2.7l1.24-1.26A1.75 1.75 0 0 0 12 7a1.75 1.75 0 0 0-1.75 1.75h-2A3.75 3.75 0 0 1 12 5a3.75 3.75 0 0 1 2.07 6.75z"/></svg>
+          </span>
           <h3>Emin değilse, tahmin etmez</h3>
           <p>Görüntü belirsizse "emin değilim" der. Kör bir kullanıcıya yanlış güven vermek, hiç cevap vermemekten tehlikelidir.</p>
         </article>
-        <article class="card">
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" focusable="false"><path fill="currentColor" d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z" opacity="0.9"/><path fill="currentColor" d="M2.8 2.8 21.2 21.2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </span>
           <h3>Yabancıların kimliğini korur</h3>
           <p>Çevredeki insanları tarif eder ama tanımaya çalışmaz; yabancıların kimliği gizli kalır.</p>
         </article>
-        <article class="card">
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" focusable="false"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H8l-6 5V6a2 2 0 0 1 2-2zm3 5h10v2H7V9z"/></svg>
+          </span>
           <h3>Kısa konuşur</h3>
           <p>Uzun paragraf değil, işine yarayan bir–iki cümle. Detay istersen sorarsın, o anlatır.</p>
         </article>
-        <article class="card">
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" focusable="false"><path fill="currentColor" d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z" opacity="0.9"/><path fill="currentColor" d="M3.5 3.5 20.5 20.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </span>
           <h3>Sürekli dinlemez</h3>
           <p>Mikrofon yalnızca çift dokunuşla açılır. Anahtarlar telefona gömülmez; bağlantı kısa ömürlü güvenli biletlerle kurulur.</p>
         </article>
-        <article class="card">
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" focusable="false"><path fill="currentColor" d="M12 21a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6zm-4.2-5.4 1.7-1.7a3.5 3.5 0 0 1 5 0l1.7 1.7 1.7-1.7a5.9 5.9 0 0 0-10.1 0l-1.7-1.7a8.3 8.3 0 0 1 13.5 0l1.7-1.7a10.7 10.7 0 0 0-16.9 0l1.7 1.7 1.7 1.7z" opacity="0.35"/><path fill="currentColor" d="M7.8 15.6l1.7-1.7a3.5 3.5 0 0 1 5 0l1.7 1.7-4.2 4.2-4.2-4.2z"/></svg>
+          </span>
           <h3>Zarifçe geriler</h3>
           <p>Ağ zayıfsa canlı moddan tek-kare moduna kendiliğinden iner ve bunu sesli haber verir. Sessiz bozulma yoktur.</p>
         </article>
@@ -221,33 +302,34 @@
 
     <!-- ═══════════ PAKETLER ═══════════ -->
     <section id="paketler" class="section" aria-labelledby="paket-baslik">
-      <h2 id="paket-baslik">Bakış paketleri</h2>
-      <p class="section-lede">
+      <p class="kicker reveal">Paketler</p>
+      <h2 id="paket-baslik" class="reveal">Bakış paketleri</h2>
+      <p class="section-lede reveal">
         <strong>Bir bakış:</strong> ekrana dokunup bir sahneyi sorduğun ve cevabını aldığın bir turdur —
         tur boyunca kaç kare gerekirse geçsin, <strong>1 bakış</strong> sayılır.
         Başlamak için kart da hesap da gerekmez: her yeni cihaza <strong>30 ücretsiz deneme bakışı</strong>.
       </p>
       <div class="cards three pricing">
-        <article class="card price-card">
+        <article class="card price-card reveal">
           <h3>Başlangıç Bakış</h3>
           <p class="price"><span class="amount">$5.99</span><span class="per">/ay</span></p>
           <p class="quota">Ayda 1.000 bakış</p>
           <p>Günlük kısa kullanımlar için: market, menü, etiket.</p>
         </article>
-        <article class="card price-card">
+        <article class="card price-card reveal">
           <h3>Standart Bakış</h3>
           <p class="price"><span class="amount">$11.99</span><span class="per">/ay</span></p>
           <p class="quota">Ayda 2.000 bakış</p>
           <p>Gün boyu düzenli kullanım için dengeli paket.</p>
         </article>
-        <article class="card price-card">
+        <article class="card price-card reveal">
           <h3>Pro Bakış</h3>
           <p class="price"><span class="amount">$29.99</span><span class="per">/ay</span></p>
           <p class="quota">Ayda 4.000 bakış</p>
           <p>Yoğun kullanım: iş, okul, seyahat.</p>
         </article>
       </div>
-      <div class="pricing-notes">
+      <div class="pricing-notes reveal">
         <p>
           Hiçbir paketi "en avantajlı" diye işaretlemiyoruz — <strong>hangisinin sana uyduğunu en iyi sen bilirsin.</strong>
         </p>
@@ -261,12 +343,13 @@
 
     <!-- ═══════════ ERİŞİLEBİLİRLİK ═══════════ -->
     <section id="erisilebilirlik" class="section" aria-labelledby="a11y-baslik">
-      <h2 id="a11y-baslik">Bu sayfa da aynı kurallarla yapıldı</h2>
-      <p class="section-lede">
+      <p class="kicker reveal">Erişilebilirlik</p>
+      <h2 id="a11y-baslik" class="reveal">Bu sayfa da aynı kurallarla yapıldı</h2>
+      <p class="section-lede reveal">
         Erişilebilirliği uygulamaya ekleyip web sitesinde unutmak olmazdı.
         Şu an okuduğun sayfa:
       </p>
-      <ul class="a11y-list">
+      <ul class="a11y-list reveal">
         <li><strong>Atkinson Hyperlegible</strong> yazı tipini kullanır — düşük görüşte harf karışmasını azaltmak için tasarlandı.</li>
         <li>Tüm renkler koyu zemin üzerinde <strong>yüksek kontrastlıdır</strong>; renk hiçbir bilgide tek başına değildir.</li>
         <li>Baştan sona <strong>klavye ile gezilebilir</strong>; ilk sekme "içeriğe atla" bağlantısıdır.</li>
@@ -277,29 +360,30 @@
 
     <!-- ═══════════ SSS ═══════════ -->
     <section id="sss" class="section" aria-labelledby="sss-baslik">
-      <h2 id="sss-baslik">Sık sorulanlar</h2>
+      <p class="kicker reveal">SSS</p>
+      <h2 id="sss-baslik" class="reveal">Sık sorulanlar</h2>
       <div class="faq">
-        <details>
+        <details class="reveal">
           <summary>Gözcü bastonumun yerine geçer mi?</summary>
           <p>Hayır — ve bunu açıkça söylüyoruz, uygulamanın ilk açılışında sesli olarak da. Gözcü çevreni anlamana yardım eden bir araçtır; fiziksel güvenliğin için baston, rehber köpek ve kendi yönelim becerilerin esastır.</p>
         </details>
-        <details>
+        <details class="reveal">
           <summary>İnternet olmadan çalışır mı?</summary>
           <p>Görü analizi bulutta yapılır, bu yüzden bakmak için bağlantı gerekir. Ağ zayıfsa Gözcü canlı moddan tek-kare moduna kendiliğinden iner ve bunu sesli bildirir. "Kaç bakışım kaldı?" gibi yerel sorular uçak modunda bile yanıtlanır.</p>
         </details>
-        <details>
+        <details class="reveal">
           <summary>Beni sürekli dinliyor mu, görüntülerim nereye gidiyor?</summary>
           <p>Sürekli dinleme yoktur; mikrofon yalnızca çift dokunuşla açılır. Kareler yalnızca sen dokunduğunda, sorunu yanıtlamak için gönderilir. API anahtarları telefona gömülmez — bağlantı, sunucudan alınan kısa ömürlü güvenli biletlerle kurulur.</p>
         </details>
-        <details>
+        <details class="reveal">
           <summary>Çevremdeki insanları tanır mı?</summary>
           <p>İnsanların varlığını ve genel görünümünü tarif eder ("solunda oturan biri var" gibi) ama yabancıları teşhis etmeye çalışmaz; kimlikleri gizli tutar.</p>
         </details>
-        <details>
+        <details class="reveal">
           <summary>Ekran okuyucumla çakışır mı?</summary>
           <p>Hayır. Varsayılan olarak Gözcü konuşmayı senin ekran okuyucuna devreder; istersen ayarlardan uygulamanın kendi sesini seçebilirsin. Her durum ayrıca titreşim ve ekran okuyucu anonsuyla bildirilir.</p>
         </details>
-        <details>
+        <details class="reveal">
           <summary>Hangi telefonlarda çalışır?</summary>
           <p>iOS ve Android'de çalışır. Arka kameralı ve titreşim motoru olan güncel bir telefon yeterlidir.</p>
         </details>
@@ -308,19 +392,48 @@
 
     <!-- ═══════════ İNDİR ═══════════ -->
     <section id="indir" class="section cta" aria-labelledby="indir-baslik">
-      <h2 id="indir-baslik">Bir dokunuş uzağında</h2>
-      <p class="section-lede">Kartsız, hesapsız <strong>30 ücretsiz bakışla</strong> başla. Beğenirsen paketini seçersin.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary store-btn" href="#" aria-disabled="true">App Store <span class="soon">yakında</span></a>
-        <a class="btn btn-primary store-btn" href="#" aria-disabled="true">Google Play <span class="soon">yakında</span></a>
+      <div class="cta-panel reveal">
+        <p class="kicker">İndir</p>
+        <h2 id="indir-baslik">Bir dokunuş uzağında</h2>
+        <p class="section-lede">Kartsız, hesapsız <strong>30 ücretsiz bakışla</strong> başla. Beğenirsen paketini seçersin.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary store-btn" href="#" aria-disabled="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            App Store <span class="soon">yakında</span>
+          </a>
+          <a class="btn btn-primary store-btn" href="#" aria-disabled="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3.6 1.8c-.3.3-.5.8-.5 1.4v17.6c0 .6.2 1.1.5 1.4l.1.1 9.9-9.8v-.9L3.7 1.7l-.1.1zm13.4 13.5-3.3-3.3v-.9l3.3-3.3 4.1 2.3c1.2.7 1.2 1.8 0 2.5l-4.1 2.7zm-3.9-2.8L4.7 22.9c.4.1.9 0 1.5-.3l10.2-5.8-3.3-3.3v-.9l3.3-3.3L6.2 1.4c-.6-.3-1.1-.4-1.5-.3l8.4 8.4v3z"/></svg>
+            Google Play <span class="soon">yakında</span>
+          </a>
+        </div>
+        <p class="fineprint">Mağaza bağlantıları yayına girdiğinde burada olacak.</p>
       </div>
-      <p class="fineprint">Mağaza bağlantıları yayına girdiğinde burada olacak.</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p><strong>Gözcü</strong> — görme engelliler için canlı görüden Türkçe sesli yanıta.</p>
-    <p class="honesty-mini">Yardımcı araçtır; bastonun ya da rehber köpeğin yerini almaz.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#ust" aria-label="Gözcü, sayfa başına dön">
+          <svg class="brand-mark" viewBox="0 0 48 48" width="32" height="32" aria-hidden="true" focusable="false">
+            <circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="3" opacity="0.35"/>
+            <circle cx="24" cy="24" r="13" fill="none" stroke="currentColor" stroke-width="3" opacity="0.7"/>
+            <circle cx="24" cy="24" r="5.5" fill="currentColor"/>
+          </svg>
+          <span>Gözcü</span>
+        </a>
+        <p>Görme engelliler için canlı görüden Türkçe sesli yanıta.</p>
+        <p class="honesty-mini">Yardımcı araçtır; bastonun ya da rehber köpeğin yerini almaz.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Alt gezinme">
+        <a href="#nasil">Nasıl çalışır</a>
+        <a href="#haptik">Haptik dili</a>
+        <a href="#ilkeler">İlkeler</a>
+        <a href="#paketler">Paketler</a>
+        <a href="#sss">SSS</a>
+        <a href="#indir">İndir</a>
+      </nav>
+    </div>
     <p class="fineprint">© 2026 Gözcü · gozcu.com</p>
   </footer>
 
