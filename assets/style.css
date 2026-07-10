@@ -655,7 +655,18 @@ body {
 .swatch.safety    { color: var(--safety); }    .swatch.safety i { height: 100%; width: 12px; }
 
 /* ── Paketler ────────────────────────────────────── */
+.cards.pricing {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  max-width: 46rem;
+  margin-inline: auto;
+}
 .price-card { text-align: center; overflow: hidden; }
+.card .price-alt {
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px dashed var(--line);
+  font-size: 0.92rem;
+}
 .price-card::before {
   content: "";
   position: absolute;
