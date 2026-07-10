@@ -820,6 +820,7 @@ body {
   border-radius: 8px;
 }
 .footer-nav a:hover { background: var(--surface-2); text-decoration: underline; }
+.site-footer .fineprint a, .footer-brand p a { color: var(--accent); }
 .site-footer .fineprint {
   max-width: var(--maxw);
   margin: 0 auto;
@@ -827,6 +828,64 @@ body {
   border-top: 1px solid var(--line-soft);
 }
 .honesty-mini { font-size: 1rem; }
+
+/* ── Hukuki sayfalar (gizlilik, koşullar) + 404 ─── */
+.legal {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 5rem;
+}
+.legal h1 { font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.15; margin: 0.5rem 0 0.5rem; }
+.legal h2 { font-size: 1.45rem; margin: 2.2rem 0 0.6rem; }
+.legal p, .legal li { color: var(--muted); }
+.legal strong, .legal em { color: var(--text); }
+.legal ul { padding-left: 1.3rem; }
+.legal li { margin-bottom: 0.5rem; }
+.legal a { color: var(--accent); }
+.yururluk {
+  font-size: 0.95rem;
+  color: var(--muted);
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+}
+.ozet-kutu {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 0;
+}
+.ozet-kutu h2 { margin-top: 0; font-size: 1.2rem; }
+.ozet-kutu ul { margin: 0; }
+.geri-baglanti {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.5rem 0.9rem;
+  margin-left: -0.9rem;
+  border-radius: 10px;
+}
+.geri-baglanti:hover { background: var(--surface-2); text-decoration: underline; }
+.sayfa-yok {
+  min-height: 70vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 3rem 1.25rem;
+}
+.sayfa-yok h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 1.5rem 0 0.5rem; }
+.sayfa-yok .kod {
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+  font-weight: 700;
+}
 
 /* ── Kaydırma açığa çıkma (yalnızca JS + hareket serbestse) ── */
 .js .reveal {
