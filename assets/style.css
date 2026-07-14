@@ -514,6 +514,8 @@ body {
 
 .fineprint { color: var(--muted); font-size: 1rem; }
 .fineprint em { color: var(--text); }
+.fineprint a { color: var(--accent); }
+.fineprint a:hover { text-decoration-thickness: 2px; }
 
 /* ── Sesli demo ──────────────────────────────────── */
 .demo-grid {
@@ -672,6 +674,15 @@ body {
 .swatch.success i:nth-child(2) { height: 75%; }
 .swatch.error     { color: var(--error); }     .swatch.error i { height: 55%; }
 .swatch.safety    { color: var(--safety); }    .swatch.safety i { height: 100%; width: 12px; }
+
+/* "Hisset" tıklamasında donanımdan bağımsız garanti geri bildirim (script.js) —
+   gerçek titreşim olsun ya da olmasın, ikon her zaman büyüyüp parlayarak tepki verir. */
+@keyframes swatch-pulse {
+  0% { transform: scale(1); filter: drop-shadow(0 0 0 transparent); }
+  35% { transform: scale(1.22); filter: drop-shadow(0 0 10px currentColor); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 0 transparent); }
+}
+.swatch-pulse { animation: swatch-pulse 0.55s cubic-bezier(0.34, 1.56, 0.64, 1); }
 
 /* ── Paketler ────────────────────────────────────── */
 .cards.pricing {
@@ -846,7 +857,12 @@ body {
   border-radius: 999px;
   padding: 0.15rem 0.6rem;
 }
-.store-btn[aria-disabled="true"] { opacity: 0.8; cursor: not-allowed; }
+.store-btn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+  /* gerçek disabled buton: tıklama/klavye etkileşimi tarayıcı tarafından zaten engellenir */
+}
+.store-btn:disabled:hover { background: transparent; transform: none; }
 
 .site-footer {
   border-top: 1px solid var(--line-soft);
@@ -976,5 +992,8 @@ body {
   .eq i { animation: none !important; transform: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .card:hover, .haptic:hover, .btn:hover, .demo-q:hover { transform: none; }
+  /* Ölçek/hareket yok, ama donanımsız cihazda tek geri bildirim kanalı bu olabileceğinden
+     parlama tamamen kaldırılmaz — yalnızca büyüme (transform) hareketi devre dışı bırakılır. */
+  @keyframes swatch-pulse { 0%, 100% { filter: drop-shadow(0 0 0 transparent); } 40% { filter: drop-shadow(0 0 10px currentColor); } }
   * { transition: none !important; }
 }
