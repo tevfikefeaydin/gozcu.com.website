@@ -1,0 +1,132 @@
+================================================================
+ GÖZCÜ — MÜDÜR YAPILACAKLAR LİSTESİ (web sitesi + yayın)
+ Güncelleme: 14 Temmuz 2026
+ Bu dosyadaki her şey hesap/DNS/hukuk erişimi gerektirdiği için
+ Müdür adımıdır; kod tarafında bekleyen iş YOKTUR.
+ Site şu an canlı: https://gozcu-website.vercel.app
+================================================================
+
+
+[1] ALAN ADINI BAĞLA — gozcu.com → Vercel            (~10 dk)
+----------------------------------------------------------------
+  a) vercel.com → giriş yap → "Main-Work" takımı →
+     "gozcu-website" projesi → Settings → Domains.
+  b) "gozcu.com" yaz → Add. (İstersen "www.gozcu.com" da ekle;
+     Vercel birini diğerine yönlendirmeyi önerir, kabul et.)
+  c) Vercel'in o ekranda gösterdiği DNS kayıtlarını, alan adını
+     aldığın firmanın (registrar) DNS paneline gir.
+     Tipik değerler (panelde gösterilen ESASTIR):
+       A     @    76.76.21.21
+       CNAME www  cname.vercel-dns.com
+  d) DNS yayılınca (5 dk – 24 saat) Vercel otomatik SSL üretir.
+  e) KONTROL: https://gozcu.com açılıyor mu, kilit simgesi var mı.
+  NOT: Sayfalardaki canonical/og etiketleri zaten gozcu.com'u
+  gösteriyor; bağlandığı an ek iş çıkmaz.
+
+
+[2] DESTEK E-POSTA KUTUSUNU KUR — destek@gozcu.com   (~15 dk)
+----------------------------------------------------------------
+  Sitede ve gizlilik/koşullar sayfalarında destek@gozcu.com
+  adresi geçiyor; kutu yoksa gelen mailler kaybolur.
+  Seçenekler (biri yeter):
+   - Cloudflare Email Routing (ücretsiz yönlendirme) →
+     destek@gozcu.com gelenleri kendi gmail'ine yönlendir.
+   - Google Workspace / Zoho Mail (gerçek posta kutusu).
+  Kurulum, [1]'deki DNS paneline MX kaydı eklemekten ibaret;
+  seçtiğin servis kayıtları adım adım gösterir.
+  KONTROL: dışarıdan destek@gozcu.com'a mail at, düştüğünü gör.
+
+
+[3] HUKUK — unvan ekle + taslak şerhlerini kaldır     (hukukçuyla)
+----------------------------------------------------------------
+  a) gizlilik.html → "1. Veri sorumlusu" bölümündeki
+     "ticari unvanı ve adresi ... eklenecektir" cümlesinin yerine
+     gerçek unvan + adres yaz.
+  b) Hukukçu onayı geldikten sonra iki sayfada da üstteki
+     "Taslak — hukukçu onayıyla yürürlüğe girer" rozetini
+     "Yürürlük tarihi: <tarih>" ile değiştir:
+       - gizlilik.html  (class="yururluk" satırı + giriş paragrafı)
+       - kosullar.html  (class="yururluk" satırı)
+  c) Uygulama içi metin de aynı taslak şerhini taşıyor:
+     gozcu.com deposunda mobile/src/i18n/legal.ts — hukukçu
+     onayında ikisi BİRLİKTE güncellenmeli.
+  İstersen bu düzenlemeleri de bana yaptırabilirsin; unvan ve
+  onaylı metni vermen yeterli.
+
+
+[4] UYGULAMA YAYINLANINCA — mağaza linklerini siteye ekle
+----------------------------------------------------------------
+  index.html → "İNDİR" bölümünde (id="indir") iki adet
+  <button ... disabled> var (App Store / Google Play, "yakında"
+  rozetli). Yayın günü:
+   a) Her butonu gerçek linkli <a> yap:
+        <a class="btn btn-primary store-btn"
+           href="https://apps.apple.com/app/idXXXXXXXX">...</a>
+        <a class="btn btn-primary store-btn"
+           href="https://play.google.com/store/apps/details?id=com.gozcu.app">...</a>
+      (SVG ikonlar aynen kalır; <span class="soon">yakında</span>
+      rozetlerini ve disabled özniteliğini SİL.)
+   b) Altındaki "Mağaza bağlantıları yayına girdiğinde..."
+      cümlesini kaldır ya da güncelle.
+   c) sitemap.xml'de ana sayfanın <lastmod> tarihini güncelle.
+  EN KOLAYI: bana "mağaza linkleri hazır, siteye ekle" de,
+  linkleri ver — gerisini ben yaparım.
+
+
+[5] UYGULAMA DEPOSU — store-metadata dalını merge et
+----------------------------------------------------------------
+  tevfikefeaydin/gozcu.com deposunda
+  "claude/gozcu-website-improvements-1bb34q" dalında hazır:
+  store-metadata/ V7 kilidiyle hizalandı (2 paket: gozcu_basic /
+  gozcu_pro; basılı-tut jesti; konum/hesap/istatistik beyanları;
+  gizlilik URL'si https://gozcu.com/gizlilik).
+  → GitHub'da bu daldan PR aç ve merge et.
+  !! DİKKAT: Bu depoda main'e push, GitHub Actions ile CANLI
+  SUNUCUYA otomatik deploy tetikler (rsync + compose
+  force-recreate = backend kısa süreliğine yeniden başlar).
+  Değişiklik yalnız dokümantasyon olsa da yeniden başlatma
+  kararı senin olsun diye merge'ü BEN YAPMADIM — uygun bir
+  zamanda merge et.
+
+
+[6] MAĞAZA YAYINI (App Store + Google Play + RevenueCat)
+----------------------------------------------------------------
+  Adım adım rehber hazır: gozcu.com deposunda
+  store-metadata/SUBMIT-CHECKLIST.md  (~1 saat aktif iş).
+  Özet sıra:
+   a) RevenueCat: proje + entitlement "gozcu_bakis" +
+      2 ürün (gozcu_basic, gozcu_pro) + webhook.
+   b) Backend env: GOOGLE_API_KEY, RC_WEBHOOK_SECRET,
+      EXPO_PUBLIC_BACKEND_BASE_URL.
+   c) Apple: Small Business Program'a ERKEN başvur (%15 komisyon,
+      sonraki çeyrekte yürürlüğe girer) → ASC'de app + 2 abonelik
+      → metadata'yı app-store.md'den yapıştır → gizlilik URL'si:
+      https://gozcu.com/gizlilik → EAS build + submit →
+      VoiceOver'lı sandbox satın alma provası.
+   d) Google Play: app + 2 abonelik + veri güvenliği formu
+      (play-store.md) → AAB yükle → TalkBack provası.
+   e) Yayın sonrası: gerçek satın alma → webhook → kota kontrolü.
+
+
+[7] OPSİYONEL AMA FAYDALI
+----------------------------------------------------------------
+  - Google Search Console'a gozcu.com'u ekle →
+    https://gozcu.com/sitemap.xml gönder (arama görünürlüğü).
+  - Alan adı bağlandıktan sonra bir kez paylaşım önizlemesini
+    dene (WhatsApp/X'e link yapıştır): og.png kartı çıkmalı.
+  - Siteye gerçek kullanıcı sesi ekle: beta kullanıcısı yorumu
+    ya da bir görme engelliler derneğiyle iş birliği notu —
+    güven boşluğunu en çok bu kapatır (içeriği sen sağlarsın,
+    yerleştirmeyi bana bırakabilirsin).
+
+
+================================================================
+ DURUM ÖZETİ (bu dosya yazıldığı andaki)
+----------------------------------------------------------------
+ [x] Site içeriği uygulamanın V16 sürümüyle hizalı
+ [x] Erişilebilirlik + güvenlik başlıkları + self-host fontlar
+ [x] Denetimde bulunan 3 hata düzeltildi, canlıda doğrulandı
+ [x] iOS/Android ana ekran ikonları + web manifest yayında
+ [x] store-metadata V7 hizalaması DALDA hazır (bkz. madde 5)
+ [ ] Madde 1-6: Müdür adımları (bu liste)
+================================================================

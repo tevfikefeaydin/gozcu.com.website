@@ -67,6 +67,7 @@ assets/favicon.svg  sonar/fener logosu
 assets/og.png       sosyal paylaşım görseli (1200×630)
 vercel.json         güvenlik başlıkları + önbellek
 robots.txt          + sitemap.xml
+YAPILACAKLAR.txt    yayın öncesi kalan Müdür adımları (alan adı, e-posta, hukuk, mağaza)
 ```
 
 > Not: Mağaza bağlantıları uygulama yayınlandığında eklenecek; "yakında" rozetiyle
