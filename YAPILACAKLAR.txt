@@ -73,20 +73,17 @@
   linkleri ver — gerisini ben yaparım.
 
 
-[5] UYGULAMA DEPOSU — store-metadata dalını merge et
+[5] UYGULAMA DEPOSU — store-metadata merge'ü      ✔ TAMAMLANDI
 ----------------------------------------------------------------
-  tevfikefeaydin/gozcu.com deposunda
-  "claude/gozcu-website-improvements-1bb34q" dalında hazır:
-  store-metadata/ V7 kilidiyle hizalandı (2 paket: gozcu_basic /
-  gozcu_pro; basılı-tut jesti; konum/hesap/istatistik beyanları;
-  gizlilik URL'si https://gozcu.com/gizlilik).
-  → GitHub'da bu daldan PR aç ve merge et.
-  !! DİKKAT: Bu depoda main'e push, GitHub Actions ile CANLI
-  SUNUCUYA otomatik deploy tetikler (rsync + compose
-  force-recreate = backend kısa süreliğine yeniden başlar).
-  Değişiklik yalnız dokümantasyon olsa da yeniden başlatma
-  kararı senin olsun diye merge'ü BEN YAPMADIM — uygun bir
-  zamanda merge et.
+  14 Temmuz 2026, Müdür onayıyla ("push and deploy") yapıldı:
+  tevfikefeaydin/gozcu.com PR #1 → main'e merge edildi (c8af7d6).
+  - CI testleri: BAŞARILI (ci.yml, run #3).
+  - Sunucu deploy'u TETİKLENMEDİ ve backend YENİDEN BAŞLAMADI:
+    deploy-server workflow'u yalnız backend/ veya deploy/
+    değiştiğinde koşuyor; bu merge yalnız store-metadata/
+    (dokümantasyon) değiştirdi. Beklenen ve doğru davranış.
+  Yapman gereken bir şey KALMADI; mağaza başvurusunda güncel
+  store-metadata/ dosyalarını kullanman yeterli (bkz. madde 6).
 
 
 [6] MAĞAZA YAYINI (App Store + Google Play + RevenueCat)
@@ -127,6 +124,7 @@
  [x] Erişilebilirlik + güvenlik başlıkları + self-host fontlar
  [x] Denetimde bulunan 3 hata düzeltildi, canlıda doğrulandı
  [x] iOS/Android ana ekran ikonları + web manifest yayında
- [x] store-metadata V7 hizalaması DALDA hazır (bkz. madde 5)
- [ ] Madde 1-6: Müdür adımları (bu liste)
+ [x] store-metadata V7 hizalaması main'de (PR #1 merge edildi,
+     testler yeşil, sunucu etkilenmedi — madde 5)
+ [ ] Madde 1-4 ve 6: Müdür adımları (bu liste)
 ================================================================
