@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gizlilik Politikası — Gözcü</title>
-  <meta name="description" content="Gözcü'nün gizlilik politikası ve KVKK aydınlatma metni: hangi verileri neden işleriz, neleri asla yapmayız." />
+  <meta name="description" content="Gözcü'nün gizlilik politikası ve KVKK aydınlatması: hangi verileri neden işleriz, kimlere aktarılır, neleri asla yapmayız." />
+  <link rel="canonical" href="https://gozcu.com/gizlilik" />
   <meta name="theme-color" content="#070d1d" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -31,81 +31,128 @@
   <main id="icerik" class="legal">
     <a class="geri-baglanti" href="/"><span aria-hidden="true">←</span> Ana sayfa</a>
     <h1>Gizlilik Politikası</h1>
-    <p class="yururluk">Yürürlük tarihi: 10 Temmuz 2026 · Sürüm 1.0</p>
+    <p class="yururluk">Son güncelleme: 14 Temmuz 2026 · Taslak — hukukçu onayıyla yürürlüğe girer</p>
+
+    <p>Bu metin, uygulama içinden sesli olarak da dinleyebildiğin gizlilik metniyle aynı yaklaşımı taşır
+    ve bir <strong>taslaktır</strong>: bir hukukçunun onayından geçmeden yürürlüğe girmez ve tam yasal uyum
+    garantisi vermez. Amacımız, kişisel verilerin korunması kurallarına uymayı hedefleyen açık ve dürüst
+    bir bilgilendirme sunmaktır — dürüstlük, Gözcü'nün tasarım ilkesidir.</p>
 
     <div class="ozet-kutu">
       <h2>Kısaca</h2>
       <ul>
-        <li>Gözcü seni <strong>sürekli dinlemez</strong>; mikrofon yalnızca sen çift dokununca açılır.</li>
-        <li>Kamera kareleri yalnızca sen dokununca gönderilir ve <strong>yanıt üretilince silinir</strong> — hiçbir yerde saklanmaz.</li>
-        <li>Kullanmak için <strong>hesap gerekmez</strong>; ad, e-posta ya da telefon numarası istemeyiz.</li>
-        <li>Yüz tanıma yapmayız; çevrendeki insanları <strong>kimliklendirmeyiz</strong>.</li>
-        <li>Verini <strong>satmayız</strong>, reklam profili çıkarmayız. İsteğe bağlı kullanım istatistikleri <strong>varsayılan olarak kapalıdır</strong>.</li>
+        <li>Gözcü seni <strong>sürekli dinlemez</strong>; mikrofon yalnızca sen ekranı <strong>basılı tutarken</strong> açıktır.</li>
+        <li>Kamera kareleri yalnızca sen dokununca, yanıtı üretmek için işlenir ve <strong>saklanmaz</strong> — arşiv yok, eğitim verisi yok.</li>
+        <li>Kullanmak için <strong>hesap gerekmez</strong>. İstersen açarsın; tek işi kalan bakışlarını cihazlar arasında taşımaktır.</li>
+        <li>Konumun yalnızca yol tarifi gibi sen istediğinde kullanılır; <strong>konum geçmişi tutulmaz</strong>, kayıtlı yerlerin cihazında kalır.</li>
+        <li>Yüz tanıma yapmayız; çevrendeki insanları <strong>kimliklendirmeyiz</strong>. Verini <strong>satmayız</strong>, reklam profili çıkarmayız.</li>
+        <li>Kamera ve konum kullanımı <strong>açık rızana</strong> bağlıdır; ilk açılışta sesli okunur ve Ayarlar'dan her an geri alınabilir.</li>
       </ul>
     </div>
 
     <h2>1. Veri sorumlusu</h2>
-    <p>Bu politika, Gözcü mobil uygulaması ve gozcu.com web sitesi ("Gözcü", "biz") için geçerlidir.
-    6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında veri sorumlusu, Gözcü uygulamasının
-    geliştiricisidir. Her türlü soru ve talebiniz için: <a href="mailto:destek@gozcu.com">destek@gozcu.com</a></p>
+    <p>Bu politika, Gözcü mobil uygulaması ve gozcu.com web sitesi ("Gözcü", "biz") için geçerlidir ve
+    6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") gözetilerek hazırlanmıştır. Veri sorumlusunun
+    ticari unvanı ve adresi, uygulamanın mağaza yayınından önce bu sayfaya eklenecektir. Her türlü soru ve
+    talebin için: <a href="mailto:destek@gozcu.com">destek@gozcu.com</a></p>
 
     <h2>2. Hangi verileri işleriz</h2>
     <ul>
-      <li><strong>Kamera kareleri:</strong> Yalnızca ekrana dokunduğunda, sorunu yanıtlamak amacıyla alınır ve
-      görü analizi için işlenir. Yanıt üretildiği anda silinir; tarafımızca saklanmaz, eğitim verisi olarak kullanılmaz.</li>
-      <li><strong>Ses kayıtları:</strong> Yalnızca çift dokunuşla başlattığın konuşma sırasında alınır, sorunun
-      metne çevrilmesi için işlenir ve yanıt üretilince silinir. Sürekli dinleme teknik olarak yoktur.</li>
-      <li><strong>Anonim cihaz tanımlayıcısı:</strong> 30 ücretsiz deneme bakışının cihaz başına bir kez
-      verilebilmesi ve kalan bakış sayacının tutulması için rastgele üretilmiş bir tanımlayıcı kullanılır.
-      Bu tanımlayıcı kimliğinle eşleştirilmez.</li>
-      <li><strong>Satın alma bilgisi:</strong> Paketler App Store / Google Play üzerinden satın alınır.
-      Ödeme ve kart bilgilerin bize hiçbir zaman ulaşmaz; mağazadan yalnızca aboneliğinin geçerli olup
-      olmadığı bilgisini alırız.</li>
-      <li><strong>Kullanım istatistikleri (isteğe bağlı):</strong> Varsayılan olarak <strong>kapalıdır</strong>.
-      Açarsan yalnızca anonim kullanım sayıları (ör. günde kaç bakış yapıldığı) paylaşılır; görüntü ve ses
-      içeriği asla paylaşılmaz.</li>
+      <li><strong>Kamera kareleri:</strong> Ekrana dokunduğunda arka kameradan alınan anlık kareler, sorunu
+      yanıtlamak için işlenir. Kamera, önündeki sahneyle birlikte çevrendeki kişileri de görebilir; görüntü
+      yalnızca yanıtı üretmek için kullanılır, Gözcü'de saklanmaz ve eğitim verisi yapılmaz.</li>
+      <li><strong>Ses:</strong> Yalnızca sen ekranı basılı tutarken alınır, sorunun anlaşılması için işlenir
+      ve yanıt üretilince silinir. Sürekli dinleme teknik olarak yoktur.</li>
+      <li><strong>Konum (istersen):</strong> "En yakın eczane nerede" gibi sorularda ve yol tarifinde o an
+      alınır. Konum geçmişi tutulmaz; "burayı evim olarak kaydet" dediğin yerler <strong>yalnızca cihazında</strong> durur.</li>
+      <li><strong>Hesap (istersen):</strong> Hesap açarsan e-postan ve şifren işlenir; şifren düz metin olarak
+      değil, geri döndürülemez bir özet biçiminde tutulur. Hesap tamamen isteğe bağlıdır.</li>
+      <li><strong>Kota ve rıza kayıtları:</strong> 30 deneme bakışının cihaz başına bir kez verilebilmesi için
+      rastgele üretilmiş takma-adlı bir cihaz tanımlayıcısı, kalan bakış hakkın ve açık rızanın tarihi/kapsamı tutulur.</li>
+      <li><strong>Satın alma bilgisi:</strong> Paketler App Store / Google Play üzerinden satın alınır. Ödeme ve
+      kart bilgilerin bize hiçbir zaman ulaşmaz; abonelik doğrulaması takma-adlı tanımlayıcıyla yapılır.</li>
+      <li><strong>İçeriksiz kullanım istatistikleri:</strong> Hangi özellik türünün kullanıldığı, hata sınıfları ve
+      yanıt süreleri gibi <strong>içerik taşımayan</strong> sayılar, uygulamayı geliştirmek için işlenir. Bu kayıtlar
+      soruların metnini, cevapları, kamera görüntünü ve konumunu <strong>içermez</strong>. Varsayılan olarak açıktır;
+      Ayarlar'daki "Kullanım istatistikleri" anahtarından istediğin an kapatabilirsin, kayıtlar 180 gün sonunda
+      kendiliğinden silinir.</li>
+      <li><strong>"Geliştirmeye yardım et" (isteğe bağlı, kapalı gelir):</strong> Varsayılan olarak <strong>kapalıdır</strong>
+      ve yalnızca sen açarsan çalışır. Açarsan sorularının kısa özeti ve yanıtın türü saklanır; kamera görüntüsü ve
+      yanıtın ayrıntısı saklanmaz, sorudaki e-posta/telefon/kimlik numarası gibi kalıplar kaydedilmeden önce maskelenir.
+      Kayıtlar en fazla 90 gün tutulur.</li>
     </ul>
 
-    <h2>3. Neleri yapmayız</h2>
+    <h2>3. Sürekli işleme gerektiren modlar</h2>
+    <p>İki özellik, doğası gereği aralıksız işleme yapar ve ikisi de <strong>sen açmadan çalışmaz</strong>,
+    çift dokunuşla anında kapanır:</p>
+    <ul>
+      <li><strong>Yürüyüş modu:</strong> Açıkken kamera, önündeki engelleri erken haber vermek için sürekli
+      işlenir; görüntüler yine saklanmaz.</li>
+      <li><strong>Canlı rehberlik (Pro, deneysel):</strong> Açıkken, seni hedefe adım adım yönlendirebilmek için
+      konumun rehberlik boyunca sürekli işlenir; cihazında veya sunucuda konum geçmişi olarak <strong>saklanmaz</strong>.
+      Kapattığında konum işlemesi durur.</li>
+    </ul>
+
+    <h2>4. Neleri yapmayız</h2>
     <ul>
       <li>Sürekli dinleme ve arka planda kayıt <strong>yapmayız</strong>.</li>
       <li>Yüz tanıma ve kimliklendirme <strong>yapmayız</strong>; Gözcü çevrendeki insanları tarif eder ama tanımaya çalışmaz.</li>
       <li>Kişisel verini üçüncü kişilere <strong>satmayız</strong>, reklam amaçlı profilleme <strong>yapmayız</strong>.</li>
-      <li>Hesap, ad, e-posta, telefon numarası ya da konum <strong>istemeyiz</strong>.</li>
+      <li>Görüntü ve konum <strong>arşivi tutmayız</strong>; kayıtlı yerlerin cihazından dışarı çıkmaz.</li>
     </ul>
 
-    <h2>4. İşleme amaçları ve hukuki sebepler</h2>
-    <p>Verilerini yalnızca şu amaçlarla işleriz: sorularını görü ve ses analiziyle yanıtlamak
-    (sözleşmenin ifası, KVKK m.5/2-c), deneme ve paket kotalarını yönetmek (meşru menfaat, m.5/2-f)
-    ve açık rızanla isteğe bağlı kullanım istatistiklerini derlemek (m.5/1).</p>
+    <h2>5. İşleme amaçları ve hukuki sebepler</h2>
+    <p>Verilerini; kamera görüntüsünden sesli yanıt üretmek, konumdan yol tarifi vermek, hesabını ve satın
+    aldığın bakış hakkını sürdürmek, hizmeti güvenli tutmak ve yasal yükümlülükleri yerine getirmek için işleriz.
+    Kamera görüntüsünün yapay zekâ servisine gönderilmesi ve konumunun kullanılması <strong>açık rızana</strong> dayanır
+    ve istediğin an geri alınabilir; hesap ve ödeme verileri hizmet sözleşmesinin ifası için işlenir. İşleme
+    sebeplerinin kesin ayrımı hukukçu onayına tabidir.</p>
 
-    <h2>5. Aktarım</h2>
-    <p>Görü ve ses analizi, bulut tabanlı yapay zekâ hizmet sağlayıcıları üzerinden yapılır; kareler ve ses
-    bu sağlayıcılara yalnızca yanıt üretimi için, şifreli bağlantıyla iletilir ve saklanmaz. API anahtarları
-    telefona gömülmez; bağlantı, sunucularımızdan alınan kısa ömürlü güvenli biletlerle kurulur. Abonelik
-    doğrulaması için Apple ve Google'ın ilgili hizmetleri kullanılır. Yasal zorunluluklar dışında başka
-    hiçbir üçüncü tarafa aktarım yapılmaz.</p>
+    <h2>6. Aktarım</h2>
+    <p>Kamera görüntüsü, yanıtı üretmek için <strong>Google'ın yapay zekâ görü servisine (Gemini)</strong> şifreli
+    bağlantıyla iletilir ve saklanmaz. Konumun, yol tarifi ve yakın yer bilgisi için Google harita servislerine ve
+    OpenStreetMap tabanlı servislere iletilir. Hesap, kullanım ve rıza kayıtların sunucu ve veritabanı
+    sağlayıcılarında barındırılır. Abonelik ve ödeme işlemleri, uygulama mağazası ve abonelik doğrulama altyapısı
+    üzerinden yürür; kart bilgilerin Gözcü tarafından görülmez. API anahtarları telefona gömülmez; bağlantı,
+    sunucularımızdan alınan kısa ömürlü güvenli biletlerle kurulur. Bu sağlayıcıların bir kısmı yurt dışında
+    bulunduğundan yurt dışına veri aktarımı söz konusu olabilir; bunun hukuki koşulları hukukçu tarafından
+    belirlenecektir. Görüntü, yanıt için Google'ın servisine iletildiğinden, o taraftaki işleme ilgili sağlayıcının
+    koşullarına da tabidir; bu noktada tam kontrol garantisi veremeyiz ve bunu açıkça söyleriz.</p>
 
-    <h2>6. Saklama süreleri</h2>
+    <h2>7. Saklama süreleri</h2>
     <ul>
-      <li>Kamera kareleri ve ses kayıtları: <strong>yanıt üretilince silinir</strong> (saniyeler içinde).</li>
-      <li>Son yanıt metni: yalnızca cihazında, 10 dakika boyunca "tekrar oku" için tutulur.</li>
-      <li>Anonim cihaz tanımlayıcısı ve kota bilgisi: uygulamayı kullandığın sürece.</li>
+      <li>Kamera kareleri ve ses: <strong>saklanmaz</strong>, anlık işlenir.</li>
+      <li>Son yanıt metni: yalnızca cihazında, 10 dakika boyunca "son yanıtı tekrar oku" için tutulur.</li>
+      <li>Kayıtlı yerler: yalnızca cihazında; sen silene kadar.</li>
+      <li>Takma-adlı cihaz tanımlayıcısı ve kota bilgisi: uygulamayı kullandığın sürece.</li>
+      <li>Hesap verileri: hesabın etkin olduğu sürece; hesabının silinmesini istediğinde silinir.</li>
+      <li>Rıza kaydı: onayının ispatı için makul bir süre.</li>
+      <li>İçeriksiz kullanım istatistikleri: <strong>180 gün</strong>, sonra kendiliğinden silinir.</li>
+      <li>"Geliştirmeye yardım et" kayıtları (yalnızca açtıysan): en fazla <strong>90 gün</strong>.</li>
       <li>Destek yazışmaları: talebin sonuçlanmasından itibaren en fazla 2 yıl.</li>
     </ul>
+    <p>Kesin süreler, yayın öncesinde hukukçu tarafından netleştirilecektir.</p>
 
-    <h2>7. Hakların (KVKK m.11)</h2>
+    <h2>8. Hakların (KVKK m.11) ve rızayı geri alma</h2>
     <p>Kişisel verilerinin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini veya silinmesini
-    isteme, aktarıldığı üçüncü kişileri bilme ve zarara uğraman hâlinde giderilmesini talep etme haklarına
-    sahipsin. Talebini <a href="mailto:destek@gozcu.com">destek@gozcu.com</a> adresine iletebilirsin;
-    en geç 30 gün içinde yanıtlarız. Ayrıca uygulama içinden Ayarlar → Gizlilik → "Verilerimi sil" ile
-    cihaz tanımlayıcına bağlı tüm kayıtları silebilirsin.</p>
+    isteme, aktarıldığı tarafları bilme, yalnızca otomatik sistemlerle yapılan analize itiraz etme ve zarara
+    uğraman hâlinde giderilmesini talep etme haklarına sahipsin. Kamera ve konum rızanı, uygulama içinde
+    <strong>Ayarlar → "Rızayı geri al"</strong> ile istediğin an geri alabilirsin; geri aldığında canlı görü ve konum
+    özellikleri, yeniden onay verene kadar çalışmaz. Hesabının ve verilerinin silinmesi dâhil tüm taleplerini
+    <a href="mailto:destek@gozcu.com">destek@gozcu.com</a> adresine iletebilirsin; en geç 30 gün içinde yanıtlarız.</p>
 
-    <h2>8. Çocukların gizliliği</h2>
-    <p>Gözcü her yaştan görme engelli kullanıcıya hizmet eder. 13 yaşından küçük kullanıcıların uygulamayı
-    bir veli ya da vasi gözetiminde kullanmasını öneririz; çocuklara özel veri toplamayız.</p>
+    <h2>9. Güvenlik</h2>
+    <p>Şifreler geri döndürülemez özet olarak tutulur, oturum bilgileri özetlenerek saklanır ve sunucu
+    kayıtlarında görüntü, konum, e-posta ya da parola gibi kişisel veriler tutulmaz. Yine de internet üzerinden
+    hiçbir aktarım yüzde yüz güvenli değildir; makul teknik ve idari tedbirleri uygulamayı hedefleriz.</p>
 
-    <h2>9. Değişiklikler</h2>
+    <h2>10. Çocukların gizliliği</h2>
+    <p>Gözcü her yaştan görme engelli kullanıcıya hizmet etmeyi amaçlar; çocuklara özel veri toplamayız ve
+    13 yaşından küçük kullanıcıların uygulamayı bir veli ya da vasi gözetiminde kullanmasını öneririz.
+    Çocuk kullanıcılara ilişkin ek koruma ve yaş sınırı gereksinimleri, yayın öncesinde hukukçu tarafından
+    değerlendirilecektir.</p>
+
+    <h2>11. Değişiklikler</h2>
     <p>Bu politikada yapılacak önemli değişiklikler uygulama içinde <em>sesli olarak</em> duyurulur ve bu
     sayfada yayımlanır. "Sessiz bozulma yok" ilkemiz gizlilik için de geçerlidir.</p>
 
