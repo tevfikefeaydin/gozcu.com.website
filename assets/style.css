@@ -4,6 +4,24 @@
    hareket-azaltmaya saygı, renk asla tek başına bilgi taşımaz.
    ═══════════════════════════════════════════════════════════ */
 
+/* ── Yazı tipi: Atkinson Hyperlegible, kendi sunucumuzdan ──
+   Üçüncü taraf (Google Fonts) isteği yok: gizlilik + hız + çevrimdışı dayanıklılık.
+   Kaynak: uygulamayla aynı font dosyaları (OFL lisansı). İtalik sentezlenir. */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/AtkinsonHyperlegible-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #070d1d;
   --bg-2: #0b1120;
@@ -433,6 +451,7 @@ body {
 }
 .cards.three { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
 .cards.principles { grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+.cards.features { grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
 .card {
   position: relative;
   background: linear-gradient(180deg, color-mix(in srgb, var(--surface-2) 55%, var(--surface)), var(--surface));
@@ -694,6 +713,45 @@ body {
   border: 1px solid var(--line);
   font-weight: 700;
 }
+.price-features {
+  list-style: none;
+  margin: 0 0 0.25rem;
+  padding: 0.9rem 0 0;
+  border-top: 1px dashed var(--line);
+  text-align: left;
+  color: var(--muted);
+  font-size: 1rem;
+}
+.price-features li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.45rem;
+}
+.price-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.price-features strong { color: var(--text); }
+
+/* "deneysel" rozeti — renk tek başına bilgi taşımaz: kelimenin kendisi bilgidir */
+.deneysel {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.35rem;
+  padding: 0.1rem 0.6rem;
+  border: 1px dashed color-mix(in srgb, var(--sky) 65%, var(--line));
+  border-radius: 999px;
+  color: var(--sky);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .pricing-notes {
   margin-top: 2rem;
   background: var(--surface);
@@ -902,6 +960,11 @@ body {
 .js .cards .reveal:nth-child(4), .js .haptic-list .reveal:nth-child(4) { transition-delay: 0.21s; }
 .js .cards .reveal:nth-child(5), .js .haptic-list .reveal:nth-child(5) { transition-delay: 0.28s; }
 .js .cards .reveal:nth-child(6), .js .haptic-list .reveal:nth-child(6) { transition-delay: 0.35s; }
+
+/* ── Yazdırma: açığa-çıkma animasyonu beklenmez, her şey görünür ── */
+@media print {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+}
 
 /* ── Hareket azaltma: animasyon yok, bilgi kaybı yok ── */
 @media (prefers-reduced-motion: reduce) {
