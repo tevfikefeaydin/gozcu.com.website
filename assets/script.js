@@ -88,6 +88,19 @@
       var desen = btn.getAttribute("data-vib").split(",").map(Number);
       var anons = btn.getAttribute("data-say") || "";
       var titredi = titresimVar && navigator.vibrate(desen);
+
+      /* navigator.vibrate() donanım yokken bile (ör. çoğu masaüstü tarayıcı) "true"
+         dönebilir: bu yüzden tıklamanın sonucu SADECE titredi'ye bağlı bırakılmaz.
+         Donanımdan bağımsız her tıklamada görsel bir nabız da tetiklenir — sessiz
+         bozulma yok ilkesi burada da geçerli. */
+      var satir = btn.closest(".haptic");
+      var gosterge = satir ? satir.querySelector(".swatch") : null;
+      if (gosterge) {
+        gosterge.classList.remove("swatch-pulse");
+        void gosterge.offsetWidth; /* reflow: aynı desene art arda basılırsa animasyon yeniden tetiklensin */
+        gosterge.classList.add("swatch-pulse");
+      }
+
       if (!titredi) {
         /* Titreşim yoksa (masaüstü) desen sesle tarif edilir — bilgi kaybolmaz */
         if (!seslendir(anons + " Bu cihazda titreşim motoru yok; deseni sesle tarif ettim.")) {
